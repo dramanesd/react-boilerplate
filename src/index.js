@@ -3,10 +3,13 @@ import ReactDom from 'react-dom'
 import '@babel/polyfill'
 import App from './App'
 import './styles.css'
+import DefaultErrorBoundary from './DefaultErrorBoundary'
 
 ReactDom.render(
   <React.StrictMode>
-    <App />
+    <DefaultErrorBoundary>
+      <App />
+    </DefaultErrorBoundary>
   </React.StrictMode>,
   document.getElementById('app')
 )
